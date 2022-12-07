@@ -1,4 +1,7 @@
 class Task < ApplicationRecord
-  # accociations
-  # validates :name, presence: true
+  validates :name, presence: true
+
+  def truncate_details
+    details[0..15]
+  end
 end
